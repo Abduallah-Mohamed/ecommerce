@@ -9,10 +9,10 @@ const porductSchema = new Schema({
     required: [true, "Please add the Product name!"],
     maxlength: [40, "The name is Too Long!!"],
   },
-  desctiption: {
+  description: {
     type: String,
     required: [true, "Plesase, Add the description..!"],
-    maxlength: [200, "The description is Too Long!!"],
+    maxlength: [400, "The description is Too Long!!"],
   },
   price: {
     type: Number,
@@ -21,6 +21,21 @@ const porductSchema = new Schema({
   photo: {
     type: String,
     required: [true, "Please, Upload a photo for your Product ... !"],
+  },
+  category: {
+    type: String,
+    enum: [
+      "general",
+      "electric",
+      "men",
+      "woman",
+      "phones",
+      "tvs",
+      "computers",
+      "kids",
+    ],
+    default: "general",
+    required: [true, "please, select the category for your product"],
   },
 });
 

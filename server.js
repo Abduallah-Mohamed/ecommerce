@@ -20,6 +20,8 @@ connection();
 const app = express();
 const admin = express(); // subApp for Admin
 
+app.use(express.json());
+
 // ? morgan package as logger ...
 if (process.env.NODE_ENV !== "production") {
   app.use(logger("dev"));
