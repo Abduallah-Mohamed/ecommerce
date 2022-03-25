@@ -12,7 +12,7 @@ const porductSchema = new Schema({
   description: {
     type: String,
     required: [true, "Plesase, Add the description..!"],
-    maxlength: [200, "The description is Too Long!!"],
+    maxlength: [400, "The description is Too Long!!"],
   },
   price: {
     type: Number,
